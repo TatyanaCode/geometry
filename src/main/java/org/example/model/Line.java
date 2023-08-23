@@ -14,6 +14,9 @@ public class Line {
         this.tg = tg;
     }
 
+    public Line() {
+    }
+
     private double k;
     private double tg;
 
