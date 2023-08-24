@@ -2,7 +2,7 @@ package org.example.service.impl;
 
 import org.example.model.Point;
 import org.example.service.PointService;
-import org.springframework.stereotype.Service;
+
 
 public class PointServiceImpl  implements PointService {
     @Override

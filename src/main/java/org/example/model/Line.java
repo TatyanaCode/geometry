@@ -1,40 +1,32 @@
 package org.example.model;
 
-import lombok.Data;
-import lombok.NoArgsConstructor;
-import lombok.RequiredArgsConstructor;
 
 
-//@Data
-//@NoArgsConstructor
-//@RequiredArgsConstructor
 public class Line {
-    public Line(double k, double tg) {
-        this.k = k;
-        this.tg = tg;
+    public Line(Point p1, Point p2) {
+        this.p1 = p1;
+        this.p2 = p2;
     }
 
-    public Line() {
+    private  Point p1;
+    private  Point p2;
+    public Point getP1() {
+        return p1;
     }
 
-    private double k;
-    private double tg;
-
-    public double getK() {
-        return k;
+    public void setP1(Point p1) {
+        this.p1 = p1;
     }
 
-    public void setK(double k) {
-        this.k = k;
+    public Point getP2() {
+        return p2;
     }
 
-    public double getTg() {
-        return tg;
+    public void setP2(Point p2) {
+        this.p2 = p2;
     }
 
-    public void setTg(double tg) {
-        this.tg = tg;
-    }
+
 
 
 

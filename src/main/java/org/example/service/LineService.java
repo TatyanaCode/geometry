@@ -1,10 +1,13 @@
 package org.example.service;
 
+import org.example.model.Line;
 import org.example.model.Point;
 
 public interface LineService {
-    double calcK(Point p1, Point p2);
-    double calcTg(double k1, double k2);
+    double calcSlopeLine(Point p1, Point p2);
+    double calcAngleLine(double tangent1, double tangent);
+    double distanceParallelLine( double slope, double slope2, Point p1, Point p2);
 
-
+//    double calcConfluenceLine(Line l1, Line l2, double slope);
+//    double calcParallelLine(Line l1,Line l2);
 }
