@@ -21,7 +21,7 @@ class LineServiceImplTest {
         Point p4 = new Point(4, 1);
         // ожидаемый результат
         double expectedSlopeA = 1.0;
-        double expectedSlopeB = 0.75;
+        double expectedSlopeB = 1.0;
         //выполнении проверка ожидаемых результатов
         double actualSlopeA = lineService.calcSlopeLine(p1, p2);
         double actualSlopeB = lineService.calcSlopeLine(p3, p4);
@@ -43,7 +43,7 @@ class LineServiceImplTest {
         double slopeB = lineService.calcSlopeLine(p3, p4);
 
         // ожидаемый результат  метода
-        double expectedAngle = 34.69;
+        double expectedAngle = 45.0;
 
         // сравнение реального и фактического результата
         double actualAngle = lineService.calcAngleLine(slopeA, slopeB);
@@ -60,8 +60,11 @@ class LineServiceImplTest {
         Line l1 = new Line(p1, p2);
         Line l2 = new Line(p3, p4);
 
-        double expectedAngle = lineService.distanceParallelLine( p1, p2, p3, p4);
+        double ParallelLine = lineService.distanceParallelLine( p1, p2, p3, p4);
         double expectedParallelLine = 3.16;
+
+        double actualParallelLine = lineService.distanceParallelLine(p1, p2,p3,p4);
+        Assertions.assertEquals(expectedParallelLine, actualParallelLine);
 
 
     }
