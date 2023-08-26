@@ -1,7 +1,6 @@
 package org.example.service.impl;
 
 
-import org.example.Main;
 import org.example.model.Line;
 import org.example.model.Point;
 import org.example.service.LineService;
