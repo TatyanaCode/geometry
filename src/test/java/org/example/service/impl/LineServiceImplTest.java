@@ -81,4 +81,21 @@ public class LineServiceImplTest {
         boolean actual = lineService.isParallelLine(slopeA, slopeB);
         assertTrue(actual);
     }
+
+    @Test
+    public void NoCrossCoordinateAxisTest() {
+        Point p1 = new Point(1, 2);
+        Point p2 = new Point(3, 4);
+        double slopes = lineService.calcSlopeLine(p1, p2);
+        boolean actual = lineService.crossCoordinateAxis(slopes);
+        assertTrue(actual);
+    }
+    @Test
+    public void CrossCoordinateAxisTest() {
+        Point p1 = new Point(1, 2);
+        Point p2 = new Point(-1, -1);
+        double slopes = lineService.calcSlopeLine(p1, p2);
+        boolean actual = lineService.crossCoordinateAxis(slopes);
+        assertTrue(actual);
+    }
 }
