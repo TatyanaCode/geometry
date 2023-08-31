@@ -8,6 +8,7 @@ public interface LineService {
     double distanceParallelLine(Point p1, Point p2, Point p3, Point p4 );
 
     boolean isParallelLine(double slopeA, double slopeB);
+    boolean noCrossCoordinateAxis(double slope);
     boolean crossCoordinateAxis(double slope);
-    boolean CrossCoordinateAxis(double slope);
+    boolean line(Point p1, Point p2);
 }

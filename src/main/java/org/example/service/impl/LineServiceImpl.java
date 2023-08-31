@@ -34,13 +34,18 @@ public class LineServiceImpl implements LineService {
 
     @Override
     // если коэффициент   не = -1, то прямая  не пересекает  координатные оси под прямым углом
-    public boolean crossCoordinateAxis(double slope) {
+    public boolean noCrossCoordinateAxis(double slope) {
         return slope != -1;
     }
     // если коэффициент    = -1, то прямая   пересекает  координатные оси под прямым углом
     @Override
-    public boolean CrossCoordinateAxis(double slope) {
+    public boolean crossCoordinateAxis(double slope) {
         return slope == 1;
+    }
+
+    @Override
+    public boolean line(Point p1, Point p2) {
+        return p1 != p2;
     }
 
 

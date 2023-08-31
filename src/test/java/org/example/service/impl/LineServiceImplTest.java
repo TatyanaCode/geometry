@@ -83,19 +83,27 @@ public class LineServiceImplTest {
     }
 
     @Test
-    public void NoCrossCoordinateAxisTest() {
+    public void noCrossCoordinateAxisTest() {
         Point p1 = new Point(1, 2);
         Point p2 = new Point(3, 4);
         double slopes = lineService.calcSlopeLine(p1, p2);
-        boolean actual = lineService.crossCoordinateAxis(slopes);
+        boolean actual = lineService.noCrossCoordinateAxis(slopes);
         assertTrue(actual);
     }
     @Test
-    public void CrossCoordinateAxisTest() {
+    public void crossCoordinateAxisTest() {
         Point p1 = new Point(1, 2);
         Point p2 = new Point(-1, -1);
         double slopes = lineService.calcSlopeLine(p1, p2);
         boolean actual = lineService.crossCoordinateAxis(slopes);
         assertTrue(actual);
+    }
+    @Test
+    public void line() {
+        Point p1 = new Point(1, 2);
+        Point p2 = new Point(3, 4);
+        boolean actual = lineService.line(p1,p2);
+        assertTrue(actual);
+
     }
 }
